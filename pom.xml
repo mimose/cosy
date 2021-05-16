@@ -7,7 +7,7 @@
     <groupId>com.mimose.cosy</groupId>
     <artifactId>cosy</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>Cosy feeling, useful tools</description>
+    <description>Cosy feeling, useful toolkit</description>
     <developers>
         <developer>
             <id>mimose</id>
