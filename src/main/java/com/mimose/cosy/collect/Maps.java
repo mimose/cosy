@@ -1,8 +1,8 @@
 package com.mimose.cosy.collect;
 
 import com.mimose.cosy.lang.Objs;
-import com.sun.istack.internal.NotNull;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -42,7 +42,7 @@ public final class Maps {
         return new TreeMap<>();
     }
 
-    public static <C, K extends C, V> TreeMap<K, V> newTreeMap(@NotNull Comparator<C> comparator) {
+    public static <C, K extends C, V> TreeMap<K, V> newTreeMap(@Nonnull Comparator<C> comparator) {
         return new TreeMap<>(Objs.requireNonNull(comparator, "newTreeMap fail, comparator is null"));
     }
 

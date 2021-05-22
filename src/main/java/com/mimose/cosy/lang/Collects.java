@@ -1,7 +1,6 @@
 package com.mimose.cosy.lang;
 
-import com.sun.istack.internal.Nullable;
-
+import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;

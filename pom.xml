@@ -31,6 +31,7 @@
         <plugin.surefire.ignore-failure>true</plugin.surefire.ignore-failure>
         <plugin.maven-javadoc-plugin.version>2.9.1</plugin.maven-javadoc-plugin.version>
         <cglib.version>3.3.0</cglib.version>
+        <jsr305.version>3.0.1</jsr305.version>
     </properties>
 
     <dependencies>
@@ -38,6 +39,11 @@
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>${cglib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>${jsr305.version}</version>
         </dependency>
     </dependencies>
 

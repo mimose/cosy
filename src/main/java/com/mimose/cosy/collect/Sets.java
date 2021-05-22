@@ -1,8 +1,8 @@
 package com.mimose.cosy.collect;
 
 import com.mimose.cosy.lang.Objs;
-import com.sun.istack.internal.NotNull;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArraySet;
 
@@ -29,7 +29,7 @@ public final class Sets {
         return new HashSet<>(capacity);
     }
 
-    public static <E> HashSet<E> newHashSet(@NotNull E[] elements) {
+    public static <E> HashSet<E> newHashSet(@Nonnull E[] elements) {
         Objs.requireNonNull(elements, "newHashSet fail, elements is null");
         HashSet<E> set = newHashSet(elements.length);
         Collections.addAll(set, elements);
@@ -44,7 +44,7 @@ public final class Sets {
         return new TreeSet<>();
     }
 
-    public static <C, E extends C> TreeSet<E> newTreeSet(@NotNull Comparator<C> comparator) {
+    public static <C, E extends C> TreeSet<E> newTreeSet(@Nonnull Comparator<C> comparator) {
         return new TreeSet<>(Objs.requireNonNull(comparator, "newTreeSet fail, comparator is null"));
     }
 
@@ -52,7 +52,7 @@ public final class Sets {
         return new CopyOnWriteArraySet<>();
     }
 
-    public static <E> CopyOnWriteArraySet<E> newCopyOnWriteArraySet(@NotNull E[] elements) {
+    public static <E> CopyOnWriteArraySet<E> newCopyOnWriteArraySet(@Nonnull E[] elements) {
         return new CopyOnWriteArraySet<>(Lists.newArrayList(Objs.requireNonNull(elements, "newCopyOnWriteArraySet fail, elements is null")));
     }
 }

@@ -1,8 +1,8 @@
 package com.mimose.cosy.collect;
 
 import com.mimose.cosy.lang.Objs;
-import com.sun.istack.internal.NotNull;
 
+import javax.annotation.Nonnull;
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -29,7 +29,7 @@ public final class Lists {
         return new ArrayList<>(capacity);
     }
 
-    public static <E> ArrayList<E> newArrayList(@NotNull E[] elements) {
+    public static <E> ArrayList<E> newArrayList(@Nonnull E[] elements) {
         Objs.requireNonNull(elements, "newArrayList fail, elements is null");
         ArrayList<E> list = newArrayList(elements.length);
         Collections.addAll(list, elements);
@@ -40,7 +40,7 @@ public final class Lists {
         return new LinkedList<>();
     }
 
-    public static <E> LinkedList<E> newLinkedList(@NotNull E[] elements) {
+    public static <E> LinkedList<E> newLinkedList(@Nonnull E[] elements) {
         Objs.requireNonNull(elements, "newLinkedList fail, elements is null");
         final LinkedList<E> list = new LinkedList<>();
         Collections.addAll(list, elements);
@@ -51,11 +51,11 @@ public final class Lists {
         return new CopyOnWriteArrayList<>();
     }
 
-    public static <E> CopyOnWriteArrayList<E> newCopyOnWriteArrayList(@NotNull E[] elements) {
+    public static <E> CopyOnWriteArrayList<E> newCopyOnWriteArrayList(@Nonnull E[] elements) {
         return new CopyOnWriteArrayList<>(Objs.requireNonNull(elements, "newCopyOnWriteArrayList fail, elements is null"));
     }
 
-    public static <E> List<E> asList(@NotNull E[] elements) {
+    public static <E> List<E> asList(@Nonnull E[] elements) {
         return Arrays.asList(Objs.requireNonNull(elements, "asList fail, elements is null"));
     }
 
